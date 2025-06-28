@@ -8,9 +8,8 @@ import type {
   ViemCompatibleTypes
 } from './types.js'
 
-/**
- * Verifies an Ethereum signature created with personal_sign or eth_sign
- */
+
+// Verifies an Ethereum signature created with personal_sign or eth_sign
 export function verifyMessage(
   address: string,
   message: string,
@@ -25,9 +24,7 @@ export function verifyMessage(
   }
 }
 
-/**
- * Verifies an EIP-712 typed data signature
- */
+// Verifies an EIP-712 typed data signature 
 export function verifyTypedData(
   address: string,
   signature: string,
