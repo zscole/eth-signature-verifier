@@ -18,7 +18,7 @@ npm run build  # Compile
 npm run dev    # Watch mode
 ```
 
-## Pull Request Flow
+## Pull Request Flow 
 
 1. Fork the repo
 2. Create a branch (`git checkout -b feature/your-feature`)
@@ -38,3 +38,4 @@ npm run dev    # Watch mode
 
 Open an issue if anything’s unclear.
 
+ 
