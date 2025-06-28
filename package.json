@@ -1,6 +1,6 @@
 {
   "name": "eth-signature-verifier",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Minimal Ethereum signature verifier supporting EIP-712, EIP-191, and eth_sign. No ethers.js or web3.js.",
   "keywords": [
     "ethereum",
