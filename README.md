@@ -30,9 +30,31 @@ verifyTypedData(
 )
 ```
 
+## Using with ethers or viem
+
+This library accepts types from popular Ethereum libraries without requiring them as dependencies:
+
+```ts
+import { verifyTypedData } from 'eth-signature-verifier'
+import type { TypedDataDomain } from 'ethers'
+import type { TypedData } from 'viem'
+
+// With ethers types
+const ethersDomain: TypedDataDomain = { /* ... */ }
+const ethersTypes = { /* ... */ }
+verifyTypedData(address, signature, ethersDomain, ethersTypes, value)
+
+// With viem types  
+const viemDomain = { /* ... */ }
+const viemTypes: TypedData = { /* ... */ }
+verifyTypedData(address, signature, viemDomain, viemTypes, value)
+```
+
+**Note:** Only TypeScript types are supported - no runtime dependencies are added to your bundle.
+
 ## Why not ethers.js?
 
-Most apps don’t need 2MB+ of dependencies just to verify a signature. This library does one thing well:
+Most apps don't need 2MB+ of dependencies just to verify a signature. This library does one thing well:
 
 * No bundler bloat
 * Works in browser or server

@@ -53,3 +53,26 @@ export interface VerifyTypedDataParams {
   /** The actual data that was signed */
   value: Record<string, any>
 }
+
+// =============================================================================
+// External Library Type Compatibility
+// =============================================================================
+// These imports are type-only and do not affect the runtime bundle
+
+// Ethers.js compatibility
+import type { 
+  TypedDataDomain as EthersTypedDataDomain,
+  TypedDataField as EthersTypedDataField
+} from 'ethers'
+
+// Viem compatibility  
+import type {
+  TypedData as ViemTypedData,
+  TypedDataDomain as ViemTypedDataDomain
+} from 'viem'
+
+// Type aliases for external library compatibility
+export type EthersCompatibleDomain = EthersTypedDataDomain
+export type EthersCompatibleTypes = Record<string, EthersTypedDataField[]>
+export type ViemCompatibleDomain = ViemTypedDataDomain
+export type ViemCompatibleTypes = ViemTypedData

@@ -36,6 +36,6 @@ npm run dev    # Watch mode
 
 ## Questions
 
-Open an issue if anything’s unclear.
+Don't @ me. Open an issue if anything’s unclear.
 
  

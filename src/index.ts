@@ -1,5 +1,12 @@
 import { hashPersonalMessage, recoverAddress, hashTypedData } from './utils.js'
-import type { TypedDataDomain, TypedDataTypes } from './types.js'
+import type { 
+  TypedDataDomain, 
+  TypedDataTypes,
+  EthersCompatibleDomain,
+  EthersCompatibleTypes,
+  ViemCompatibleDomain,
+  ViemCompatibleTypes
+} from './types.js'
 
 /**
  * Verifies an Ethereum signature created with personal_sign or eth_sign
@@ -24,12 +31,12 @@ export function verifyMessage(
 export function verifyTypedData(
   address: string,
   signature: string,
-  domain: TypedDataDomain,
-  types: TypedDataTypes,
+  domain: TypedDataDomain | EthersCompatibleDomain | ViemCompatibleDomain,
+  types: TypedDataTypes | EthersCompatibleTypes | ViemCompatibleTypes,
   value: Record<string, any>
 ): boolean {
   try {
-    const digest = hashTypedData(domain, types, value)
+    const digest = hashTypedData(domain as TypedDataDomain, types as TypedDataTypes, value)
     const recovered = recoverAddress(digest, signature)
     return address.toLowerCase() === recovered.toLowerCase()
   } catch {
@@ -37,4 +44,11 @@ export function verifyTypedData(
   }
 }
 
-export type { TypedDataDomain, TypedDataTypes } from './types.js'
+export type { 
+  TypedDataDomain, 
+  TypedDataTypes,
+  EthersCompatibleDomain,
+  EthersCompatibleTypes,
+  ViemCompatibleDomain,
+  ViemCompatibleTypes
+} from './types.js'
