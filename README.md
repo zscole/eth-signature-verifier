@@ -1,5 +1,7 @@
 # eth-signature-verifier
 
+[![Bundle Size](https://badgen.net/bundlephobia/minzip/eth-signature-verifier)](https://bundlephobia.com/package/eth-signature-verifier)
+
 Minimal Ethereum signature verifier for [EIP-712](https://eips.ethereum.org/EIPS/eip-712), [EIP-191](https://eips.ethereum.org/EIPS/eip-191), and `eth_sign`. No ethers.js, no web3.js. Zero dependencies.
 
 ## Install
