@@ -24,14 +24,14 @@ npm run dev    # Watch mode
 2. Create a branch (`git checkout -b feature/your-feature`)
 3. Write clean, focused code with tests
 4. Confirm all tests pass (`npm test`)
-5. Push and open a Pull Request
+5. Push and open PR
 
 ## Code Guidelines
 
 * TypeScript only
 * Match existing style and structure
 * Keep functions minimal and well-named
-* Test all added behavior — success, failure, edge cases
+* Test all added behavior
 * Prefer real-world signature data in tests
 
 ## Questions
