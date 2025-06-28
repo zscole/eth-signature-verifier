@@ -1,0 +1,60 @@
+{
+  "name": "eth-signature-verifier",
+  "version": "0.1.0",
+  "description": "Minimal Ethereum signature verifier supporting EIP-712, EIP-191, and eth_sign. No ethers.js or web3.js.",
+  "keywords": [
+    "ethereum",
+    "eip-712",
+    "eip-191",
+    "eth_sign",
+    "personal_sign",
+    "verify signature",
+    "web3",
+    "crypto",
+    "typed data",
+    "eth"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zscole/eth-signature-verifier.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zscole/eth-signature-verifier/issues"
+  },
+  "homepage": "https://github.com/zscole/eth-signature-verifier#readme",
+  "author": "Zak Cole <zcole@linux.com> (https://github.com/zscole)",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist",
+    "dev": "tsc --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.4.0",
+    "@noble/hashes": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
